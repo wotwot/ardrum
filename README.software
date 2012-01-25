@@ -1,0 +1,22 @@
+# ardrum
+
+## Software Quickstart:
+ * edit ardrum.pde to adapt your controllers to the arduino/multiplexer pins, compile and upload into arduino (more in README.hardware)
+
+## Prerequisites:
+ * Arduino Software (http://arduino.cc/)
+ * Pure Data Extended, currently 0.42.5 (http://puredata.info/)
+ * for pure data on linux, jack is recommended although not required
+
+## GO
+if the hardware is working, pure data will receive sensor data that can be fed into various patches
+the will trigger and/or influnce audio synthesis or something else.
+to get it running, open the main pd patch called ardrum.pd.
+it contains several other patches, one to receive sensor data and several others that produce sound.
+the outlets of the receiving patch can be connected to sound generating patches.
+
+(c) 2011-2012 wotwot
+
+license: cc-by-nc-sa
+parts (c) MIT licensed and/or others
+

@@ -1,0 +1,32 @@
+# ardrum
+
+## Hardware Info
+
+### components
+
+ * arduino atmega 168 or 328
+ * circuit using an analog multiplexer (hc 4067) if more than six inputs are desired
+ * some parts with piezos and/or switches attached
+
+
+### Design Info:
+
+up to 16 (+5) sensors can be connected to trigger and influence sound synthesis.
+these sensors need to be hooked up to the 16 multiplexer ports. the multiplexed
+signal is fed into one analogue input of the arduino that sends it via usb.
+
+
+### general flow of communication in hardware:
+
+piezos/switches -> multiplexer -> arduino -> usb -> computer
+
+the arduino sketch has some uses a mapping from any controller number to the desired values in pure data. the
+connected hardware can be adjusted in ardrum.pde.
+
+
+
+(c) 2011-2012 wotwot
+
+license: cc-by-nc-sa
+parts by others
+
