@@ -1,0 +1,54 @@
+# ardrum
+
+ardrum is an electronic drum DIY project using arduino and pure data
+
+Quickstart:
+ * it involves connecting at least some cables between several pieces of electronics
+ * so, quick this not is.
+ * this combination of hard- and software was developed on a unix system and runs
+	on linux and osx. windows has not been tested.
+
+Software Quickstart:
+ * edit ardrum.pde to adapt your controllers to the arduino/multiplexer pins
+ * compile and upload into arduino
+ * connect input sources
+ * start pure data patch
+ * README.software explains the software part
+
+Hardware Quickstart:
+ * README.hardware explains the hardware part
+
+
+Design Info:
+
+this project is using diy equipment to provide an electronic drumset kit that
+utilises the audio synthesis capabilities of pure data together with an arduino
+microcontroller for input and communication.
+
+ardrum gives a framework for building a diy drumset. the actual hardware can be
+anything with a piezo, switch or similar sensor attached. up to 16 sensors can
+be connected to trigger and influence sound synthesis.
+
+this is WIP and will require some configuration to let the involved components
+talk to each other. it also requires some effort to build the necessary hardware
+although it can also be easily adapted to use a midi controller in which case half
+of the software would not need to be used.
+
+general flow of communication:
+
+piezos/switches -> multiplexer -> arduino -> pure data -> synthesis patches or samples -> audio out.
+
+the arduino sketch uses a mapping from any controller number to the desired values in pure data. the
+connected hardware can be adjusted in ardrum.pde.
+
+the pure data patch uses a subpatch that collects the information sent by the arduino and distributes
+the incoming controller values to different sound generating patches. while this could be done using
+firmata, it is a patch that also controls the attached multiplexer without using communication on the
+data "bus".
+
+
+(c) 2011-2012 wotwot
+
+license: cc-by-nc-sa
+parts (c) by others
+
