@@ -8,15 +8,15 @@ Quickstart:
  * this combination of hard- and software was developed on a unix system and runs
 	on linux and osx. windows has not been tested.
 
+Hardware Quickstart:
+ * README.hardware explains the hardware part
+
 Software Quickstart:
  * edit ardrum.pde to adapt your controllers to the arduino/multiplexer pins
  * compile and upload into arduino
  * connect input sources
  * start pure data patch
  * README.software explains the software part
-
-Hardware Quickstart:
- * README.hardware explains the hardware part
 
 
 Design Info:
