@@ -47,7 +47,7 @@ firmata, it is a patch that also controls the attached multiplexer without using
 data "bus".
 
 
-(c) 2011-2012 wotwot
+(c) 2011-2014 wotwot
 
 license: cc-by-nc-sa
 parts (c) by others
