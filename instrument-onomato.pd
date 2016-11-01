@@ -1,0 +1,34 @@
+#N canvas 1816 -109 843 403 10;
+#X obj 132 18 arbum;
+#X obj 353 348 dac~;
+#X obj 752 187 knob 32 32 0 127 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 3100 1;
+#X obj 752 229 / 127;
+#X obj 752 256 pack \$1 50;
+#X obj 752 279 vline~;
+#X obj 368 309 *~;
+#X obj 25 20 pddp/dsp;
+#X obj 24 336 nanoKONTROL-nogui;
+#X obj 135 249 drumset-onomato;
+#X obj 27 370 lpd8-nogui foo----------------------------------------------
+;
+#X obj 742 160 r kf9;
+#X text 19 173 33 + 49 bite themselves;
+#X connect 0 0 9 6;
+#X connect 0 1 9 7;
+#X connect 0 2 9 5;
+#X connect 0 3 9 4;
+#X connect 0 4 9 2;
+#X connect 0 5 9 3;
+#X connect 0 6 9 8;
+#X connect 0 13 9 12;
+#X connect 0 14 9 13;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 1;
+#X connect 6 0 1 0;
+#X connect 6 0 1 1;
+#X connect 9 0 6 0;
+#X connect 10 9 2 0;
+#X connect 11 0 2 0;

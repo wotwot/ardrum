@@ -1,0 +1,26 @@
+#N canvas 1865 -124 843 403 10;
+#X obj 119 18 arbum;
+#X obj 353 348 dac~;
+#X obj 739 187 knob 32 32 0 127 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 3100 1;
+#X obj 739 229 / 127;
+#X obj 739 256 pack \$1 50;
+#X obj 739 279 vline~;
+#X obj 355 309 *~;
+#X obj 122 249 drumset-808+909;
+#X obj 25 20 pddp/dsp;
+#X connect 0 0 7 6;
+#X connect 0 1 7 7;
+#X connect 0 2 7 5;
+#X connect 0 3 7 4;
+#X connect 0 4 7 2;
+#X connect 0 5 7 3;
+#X connect 0 13 7 12;
+#X connect 0 14 7 13;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 1;
+#X connect 6 0 1 0;
+#X connect 6 0 1 1;
+#X connect 7 0 6 0;

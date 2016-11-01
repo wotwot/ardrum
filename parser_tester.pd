@@ -1,0 +1,40 @@
+#N canvas 838 147 466 305 10;
+#X obj 110 92 comport 0 9600;
+#X msg 174 68 close;
+#X floatatom 111 166 5 0 0 0 - - -;
+#N canvas 194 45 687 494 parse 1;
+#X obj 140 122 select 13 10;
+#X obj 142 186 repack 22;
+#X obj 137 32 inlet;
+#X obj 143 389 outlet;
+#X obj 142 219 route 48 49;
+#X obj 220 377 outlet;
+#X text 207 47 Comport spits out ASCII strings: potPin id \, val \,
+carriage return \, newline.;
+#X text 230 119 strip off return and bang on each newline;
+#X text 211 184 repack \, argument inconsequential since I'm banging
+it.;
+#X text 231 222 route by ID;
+#X text 352 300 ASCII to float;
+#X obj 90 299 moocow/string2any 16;
+#X obj 223 299 moocow/string2any 16;
+#X connect 0 0 1 0;
+#X connect 0 2 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 0 0;
+#X connect 4 0 11 0;
+#X connect 4 1 12 0;
+#X connect 11 0 3 0;
+#X connect 12 0 5 0;
+#X restore 110 135 pd parse;
+#X floatatom 153 166 5 0 0 0 - - -;
+#X text 78 16 Your port here;
+#X msg 83 64 open \$1;
+#X obj 80 40 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 3 0 2 0;
+#X connect 3 1 4 0;
+#X connect 6 0 0 0;
+#X connect 7 0 6 0;

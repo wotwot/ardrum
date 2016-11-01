@@ -12,7 +12,7 @@ Hardware Quickstart:
  * README.hardware explains the hardware part
 
 Software Quickstart:
- * edit ardrum.pde to adapt your controllers to the arduino/multiplexer pins
+ * edit ardrum.ino to adapt your controllers to the arduino/multiplexer pins
  * compile and upload into arduino
  * connect input sources
  * start pure data patch
@@ -39,7 +39,7 @@ general flow of communication:
 piezos/switches -> multiplexer -> arduino -> pure data -> synthesis patches or samples -> audio out.
 
 the arduino sketch uses a mapping from any controller number to the desired values in pure data. the
-connected hardware can be adjusted in ardrum.pde.
+connected hardware can be adjusted in ardrum.ino.
 
 the pure data patch uses a subpatch that collects the information sent by the arduino and distributes
 the incoming controller values to different sound generating patches. while this could be done using
@@ -47,7 +47,7 @@ firmata, it is a patch that also controls the attached multiplexer without using
 data "bus".
 
 
-(c) 2011-2015 wotwot
+(c) 2011-2038 wotwot
 
 license: cc-by-nc-sa
 parts (c) by others

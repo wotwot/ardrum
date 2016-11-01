@@ -7,6 +7,9 @@
  * Arduino Software (http://arduino.cc/)
  * Pure Data Extended, currently 0.42.5 (http://puredata.info/)
  * for pure data on linux, jack is recommended although not required
+ 
+times have changed, the world has moved on to puredata vanilla with deken. some of the pd patches will
+require external libraries with pd vanilla.
 
 ## GO
 if the hardware is working, pure data will receive sensor data that can be fed into various patches
@@ -15,7 +18,9 @@ to get it running, open the main pd patch called ardrum.pd.
 it contains several other patches, one to receive sensor data and several others that produce sound.
 the outlets of the receiving patch can be connected to sound generating patches.
 
-(c) 2011-2015 wotwot
+the other pd patches included are different approaches, ie using samples instead.
+
+(c) 2011-2038 wotwot
 
 license: cc-by-nc-sa
 parts (c) MIT licensed and/or others
