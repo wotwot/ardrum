@@ -20,12 +20,13 @@ signal is fed into one analogue input of the arduino that sends it via usb.
 
 piezos/switches -> multiplexer -> arduino -> usb -> computer
 
-the arduino sketch has some preprocessor directives for a mapping from any controller number to the desired values in pure data. the
-connected hardware should be adjusted in ardrum.pde.
+the arduino sketch has some preprocessor directives for a mapping from any controller number to the desired values in pure data. the connected hardware should be adjusted in ardrum.ino.
 
+if the hardware is supposed to work with higher input voltages than 5V, extra circuitry would be necessary to protect the MCU/MUX inputs.
 
+the arduino sketch was written when the .pde naming was hip, ymmv.
 
-(c) 2011-2015 wotwot
+(c) 2011-2038 wotwot
 
 license: cc-by-nc-sa
 parts (c) by others
